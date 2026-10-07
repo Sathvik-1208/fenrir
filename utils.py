@@ -14,7 +14,7 @@ def get_valid_datetime(value):
             return None
         parsed = datetime.strptime(value, '%d/%m/%Y %I:%M %p')
         if parsed < datetime.now():
-            log('Please do not enter a past time and/or time.', 'WARNING')
+            log('Please do not enter a past date and/or time.', 'WARNING')
             return None
         return parsed.strftime('%d/%m/%Y %I:%M %p')
     except ValueError:
